@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+    if(Session["IDUser"]==null)
+    {
+
+        Response.Redirect("~/Login/Index");
+
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+
+        <h1> My user pagge detalis<h1/>
+         <h3> username:@Session["UserName"].ToString() <h3/>
+        
+
+
+                 <a href="@Url.Action("LogOut","Login")">LogOut</a>
+</div>
+</body>
+</html>
